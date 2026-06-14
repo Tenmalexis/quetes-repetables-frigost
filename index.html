@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)file:///C:/Users/adtg6/Downloads/frigost-quetes_1.html -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quêtes Répétables – Frigost | Tenmalexis</title>
+<link rel="preconnect" href="https://fonts.bunny.net/">
+<link href="./Quêtes Répétables – Frigost _ Tenmalexis_files/css" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0c10;
+  --bg2: #0f1218;
+  --bg3: #141820;
+  --bg4: #1a2030;
+  --border: #1e2535;
+  --border2: #2a3248;
+  --gold: #f4b400;
+  --gold2: #ffd54f;
+  --gold-dim: rgba(244,180,0,0.12);
+  --gold-glow: rgba(244,180,0,0.25);
+  --text: #e8eaf0;
+  --text2: #9aa3b8;
+  --text3: #5c6478;
+  --ice: #7ecfff;
+  --ice2: #b3e5fc;
+  --ice-dim: rgba(126,207,255,0.12);
+  --f1: #4fc3f7;
+  --f2: #29b6f6;
+  --f3: #0288d1;
+  --green: #66bb6a;
+  --green-dim: rgba(102,187,106,0.12);
+
+  --font-title: 'Exo 2', sans-serif;
+  --font-ui: 'Rajdhani', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ─── BACKGROUND ─── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 10% 0%, rgba(126,207,255,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 100%, rgba(244,180,0,0.04) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── LAYOUT ─── */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── HEADER ─── */
+header {
+  padding: 32px 0 28px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.header-left { flex: 1; min-width: 260px; }
+
+.header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--gold-dim);
+  border: 1px solid rgba(244,180,0,0.3);
+  border-radius: 4px;
+  padding: 3px 10px;
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-family: var(--font-title);
+  font-size: clamp(22px, 4vw, 34px);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+header h1 span { color: var(--ice); }
+
+.header-sub {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--text2);
+  font-family: var(--font-ui);
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.yt-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255,0,0,0.1);
+  border: 1px solid rgba(255,0,0,0.25);
+  border-radius: 6px;
+  padding: 7px 14px;
+  color: #ff5252;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all .2s;
+  letter-spacing: .3px;
+}
+.yt-link:hover { background: rgba(255,0,0,0.18); border-color: rgba(255,0,0,0.45); color: #ff6e6e; }
+.yt-link svg { flex-shrink: 0; }
+
+.creator-code {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--gold-dim);
+  border: 1px solid rgba(244,180,0,0.25);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: .5px;
+}
+.creator-code .label { color: var(--text3); font-weight: 500; }
+
+/* ─── BILAN ─── */
+.bilan-card {
+  background: linear-gradient(135deg, #0f1820 0%, #0a1218 100%);
+  border: 1px solid rgba(126,207,255,0.2);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 32px;
+  box-shadow: 0 0 40px rgba(126,207,255,0.06), inset 0 1px 0 rgba(126,207,255,0.08);
+  position: sticky;
+  top: 12px;
+  z-index: 10;
+}
+
+.bilan-title {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ice);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.bilan-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(126,207,255,0.2), transparent);
+}
+
+.bilan-stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.bilan-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 120px;
+}
+.bilan-stat .val {
+  font-family: var(--font-title);
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+.bilan-stat.kamas .val { color: var(--gold); }
+.bilan-stat.glace .val { color: var(--ice); }
+.bilan-stat.quetes .val { color: var(--green); }
+.bilan-stat .lbl {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  color: var(--text3);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.bilan-divider { width: 1px; height: 40px; background: var(--border2); }
+
+.bilan-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  cursor: pointer;
+  transition: all .2s;
+  border: none;
+  text-transform: uppercase;
+}
+.btn-reset {
+  background: rgba(255,80,80,0.1);
+  border: 1px solid rgba(255,80,80,0.2);
+  color: #ff6b6b;
+}
+.btn-reset:hover { background: rgba(255,80,80,0.18); border-color: rgba(255,80,80,0.4); }
+.btn-all {
+  background: var(--gold-dim);
+  border: 1px solid rgba(244,180,0,0.25);
+  color: var(--gold);
+}
+.btn-all:hover { background: rgba(244,180,0,0.2); }
+
+/* ─── SECTION ─── */
+.section {
+  margin-bottom: 28px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+  padding: 14px 18px;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: .7;
+}
+
+.s-f1 .section-header { background: linear-gradient(135deg, #0f1e2e 0%, #0a1520 100%); border-top: 2px solid var(--f1); }
+.s-f2 .section-header { background: linear-gradient(135deg, #0a1a2a 0%, #071218 100%); border-top: 2px solid var(--f2); }
+.s-f3 .section-header { background: linear-gradient(135deg, #071520 0%, #050e18 100%); border-top: 2px solid var(--f3); }
+
+.section-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.section-info { flex: 1; position: relative; }
+.section-name {
+  font-family: var(--font-title);
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -.3px;
+}
+.s-f1 .section-name span { color: var(--f1); }
+.s-f2 .section-name span { color: var(--f2); }
+.s-f3 .section-name span { color: var(--f3); }
+
+.section-meta {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  color: var(--text3);
+  margin-top: 2px;
+  letter-spacing: .5px;
+}
+
+.section-body {
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+/* ─── SUBSECTION ─── */
+.subsection { }
+
+.subsection-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: var(--bg3);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text3);
+  cursor: pointer;
+  user-select: none;
+  transition: background .15s;
+}
+.subsection-title:hover { background: var(--bg4); color: var(--text2); }
+.subsection-title .sub-count {
+  margin-left: auto;
+  background: var(--border2);
+  padding: 1px 7px;
+  border-radius: 10px;
+  font-size: 10px;
+  color: var(--text2);
+}
+.subsection-title .chevron {
+  transition: transform .2s;
+  color: var(--text3);
+  font-size: 10px;
+}
+.subsection-title.collapsed .chevron { transform: rotate(-90deg); }
+
+.subsection-body { }
+.subsection-body.hidden { display: none; }
+
+.notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 18px;
+  background: rgba(244,180,0,0.04);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-ui);
+  font-size: 11px;
+  color: #a07020;
+  line-height: 1.5;
+}
+.notice .icon { flex-shrink: 0; margin-top: 1px; }
+
+/* ─── QUEST ROW ─── */
+.quest-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 18px;
+  border-bottom: 1px solid var(--border);
+  transition: background .15s;
+  cursor: pointer;
+}
+.quest-row:last-child { border-bottom: none; }
+.quest-row:hover { background: rgba(255,255,255,0.025); }
+.quest-row.checked { background: rgba(102,187,106,0.04); }
+
+/* Custom checkbox */
+.q-check {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 2px solid var(--border2);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .15s;
+  background: var(--bg2);
+}
+.quest-row.checked .q-check {
+  background: var(--green);
+  border-color: var(--green);
+}
+.q-check svg { opacity: 0; transition: opacity .15s; }
+.quest-row.checked .q-check svg { opacity: 1; }
+
+.q-name {
+  flex: 1;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.3;
+}
+.q-name a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--border2);
+  transition: color .15s;
+}
+.q-name a:hover { color: var(--ice); border-color: var(--ice); }
+.q-sub {
+  font-size: 11px;
+  color: var(--text3);
+  font-family: var(--font-body);
+  font-weight: 400;
+  display: block;
+  margin-top: 1px;
+}
+
+.q-rewards {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.q-kamas {
+  font-family: var(--font-title);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+.q-glace {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ice);
+  white-space: nowrap;
+  background: var(--ice-dim);
+  border: 1px solid rgba(126,207,255,0.15);
+  border-radius: 4px;
+  padding: 2px 7px;
+}
+
+.q-tag-random {
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  color: #a07020;
+  background: rgba(244,180,0,0.08);
+  border: 1px solid rgba(244,180,0,0.15);
+  border-radius: 3px;
+  padding: 2px 6px;
+}
+
+/* HEBDO tag */
+.q-tag-hebdo {
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  color: #9c6cf0;
+  background: rgba(156,108,240,0.1);
+  border: 1px solid rgba(156,108,240,0.2);
+  border-radius: 3px;
+  padding: 2px 6px;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 600px) {
+  .bilan-stats { gap: 12px; }
+  .bilan-divider { display: none; }
+  .q-rewards { flex-direction: column; align-items: flex-end; gap: 4px; }
+  .bilan-actions { width: 100%; justify-content: flex-end; }
+  header { flex-direction: column; align-items: flex-start; }
+  .header-right { align-items: flex-start; }
+}
+
+/* ─── TOAST ─── */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  color: var(--text2);
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all .3s;
+  pointer-events: none;
+}
+.toast.show { opacity: 1; transform: translateY(0); }
+.toast.success { border-color: rgba(102,187,106,0.35); color: var(--green); }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-left">
+      <div class="header-badge">
+        <svg width="10" height="10" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="currentColor"></circle></svg>
+        Quêtes Répétables
+      </div>
+      <h1>Frigost — <span>Kamas de Glace</span></h1>
+      <div class="header-sub">Suivi quotidien &amp; hebdomadaire • Sauvegarde automatique</div>
+    </div>
+    <div class="header-right">
+      <a class="yt-link" href="https://www.youtube.com/@tenmalexis" target="_blank">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.93-1.942C18.2 5.6 12 5.6 12 5.6s-6.2 0-7.87.459A2.75 2.75 0 0 0 2.2 8.001 28.6 28.6 0 0 0 1.75 12a28.6 28.6 0 0 0 .45 3.999 2.75 2.75 0 0 0 1.93 1.942C5.8 18.4 12 18.4 12 18.4s6.2 0 7.87-.459a2.75 2.75 0 0 0 1.93-1.942A28.6 28.6 0 0 0 22.25 12a28.6 28.6 0 0 0-.45-3.999zM9.75 15V9l5.25 3-5.25 3z"></path></svg>
+        Tenmalexis
+      </a>
+      <div class="creator-code">
+        <span class="label">CODE CRÉATEUR</span>
+        <strong>TENMA</strong>
+      </div>
+    </div>
+  </header>
+
+  <!-- BILAN STICKY -->
+  <div class="bilan-card">
+    <div class="bilan-title">
+      <svg width="12" height="12" viewBox="0 0 12 12"><path d="M6 1l1.5 3 3.5.5-2.5 2.5.6 3.5L6 9l-3.1 1.5.6-3.5L1 4.5l3.5-.5z" fill="currentColor"></path></svg>
+      Bilan de la session
+    </div>
+    <div class="bilan-stats">
+      <div class="bilan-stat quetes">
+        <div class="val" id="stat-quetes">0</div>
+        <div class="lbl">Quêtes cochées</div>
+      </div>
+      <div class="bilan-divider"></div>
+      <div class="bilan-stat kamas">
+        <div class="val" id="stat-kamas">0</div>
+        <div class="lbl">Kamas</div>
+      </div>
+      <div class="bilan-divider"></div>
+      <div class="bilan-stat glace">
+        <div class="val" id="stat-glace">0</div>
+        <div class="lbl">Kamas de Glace</div>
+      </div>
+      <div class="bilan-actions">
+        <button class="btn btn-all" onclick="toggleAll()">✓ Tout cocher</button>
+        <button class="btn btn-reset" onclick="resetAll()">✕ Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FRIGOST 1 -->
+  <div class="section s-f1">
+    <div class="section-header">
+      <div class="section-icon">❄️</div>
+      <div class="section-info">
+        <div class="section-name"><span>Frigost I</span> — Zone de départ</div>
+        <div class="section-meta">32 quêtes au total • 4 par jour + 3 par semaine</div>
+      </div>
+    </div>
+    <div class="section-body">
+
+      <!-- Métiers Récolte -->
+      <div class="subsection">
+        <div class="subsection-title" onclick="toggleSub(this)">
+          <span class="chevron">▾</span>
+          🌾 Métiers de Récolte
+          <span class="sub-count">6 quêtes • 1/jour max</span>
+        </div>
+        <div class="subsection-body">
+          <div class="notice"><span class="icon">⚠️</span><span>Une seule de ces 6 quêtes est proposée par jour (aléatoire). La quête principale <a href="https://www.dofuspourlesnoobs.com/le-calendrier-des-reacutecoltes.html" target="_blank" style="color:var(--gold)">Le Calendrier des Récoltes</a> est déclenchée en acceptant l'une d'elles.</span></div>
+          <div class="quest-row" data-kamas="11980" data-glace="1" onclick="toggleQuest(this)" data-id="q0">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/michons-fleuris.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Michons Fleuris</a></div>
+            <div class="q-rewards">
+              <span class="q-kamas">11 980 K</span>
+              <span class="q-glace">❄ 1</span>
+              <span class="q-tag-random">Aléatoire</span>
+            </div>
+          </div>
+          <div class="quest-row" data-kamas="11980" data-glace="1" onclick="toggleQuest(this)" data-id="q1">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/on-se-legraveve-tous-pour-annette.html" target="_blank" onclick="e=&gt;e.stopPropagation()">On se Lève Tous pour Annette</a></div>
+            <div class="q-rewards">
+              <span class="q-kamas">11 980 K</span>
+              <span class="q-glace">❄ 1</span>
+              <span class="q-tag-random">Aléatoire</span>
+            </div>
+          </div>
+          <div class="quest-row" data-kamas="11980" data-glace="1" onclick="toggleQuest(this)" data-id="q2">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/heureusement-il-a-faim-duss.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Heureusement il a Faim Duss</a></div>
+            <div class="q-rewards">
+              <span class="q-kamas">11 980 K</span>
+              <span class="q-glace">❄ 1</span>
+              <span class="q-tag-random">Aléatoire</span>
+            </div>
+          </div>
+          <div class="quest-row" data-kamas="11980" data-glace="1" onclick="toggleQuest(this)" data-id="q3">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/mmmh-shab-al.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Mmmh Shab-al</a></div>
+            <div class="q-rewards">
+              <span class="q-kamas">11 980 K</span>
+              <span class="q-glace">❄ 1</span>
+              <span class="q-tag-random">Aléatoire</span>
+            </div>
+          </div>
+          <div class="quest-row" data-kamas="11980" data-glace="1" onclick="toggleQuest(this)" data-id="q4">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/mines-anti-personnel.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Mines Anti-Personnel</a></div>
+            <div class="q-rewards">
+              <span class="q-kamas">11 980 K</span>
+              <span class="q-glace">❄ 1</span>
+              <span class="q-tag-random">Aléatoire</span>
+            </div>
+          </div>
+          <div class="quest-row" data-kamas="11980" data-glace="1" onclick="toggleQuest(this)" data-id="q5">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/chaudiegravere-au-charbon.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Chaudière au Charbon</a></div>
+            <div class="q-rewards">
+              <span class="q-kamas">11 980 K</span>
+              <span class="q-glace">❄ 1</span>
+              <span class="q-tag-random">Aléatoire</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Métiers Craft -->
+      <div class="subsection">
+        <div class="subsection-title" onclick="toggleSub(this)">
+          <span class="chevron">▾</span>
+          ⚒️ Métiers de Craft
+          <span class="sub-count">16 quêtes • 1/jour max</span>
+        </div>
+        <div class="subsection-body">
+          <div class="notice"><span class="icon">⚠️</span><span>Une seule de ces 16 quêtes est proposée par jour (aléatoire). La quête principale <a href="https://www.dofuspourlesnoobs.com/jaurais-voulu-ecirctre-un-artisan.html" target="_blank" style="color:var(--gold)">J'aurais Voulu Être un Artisan</a> est déclenchée en acceptant l'une d'elles.</span></div>
+          <div class="quest-row" data-kamas="11980" data-glace="1" onclick="toggleQuest(this)" data-id="q6">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/cest-bon-pour-le-moral.html" target="_blank" onclick="e=&gt;e.stopPropagation()">C'est Bon pour le Moral</a><span class="q-sub">Paysan</span></div>
+            <div class="q-rewards"><span class="q-kamas">11 980 K</span><span class="q-glace">❄ 1</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="11980" data-glace="1" onclick="toggleQuest(this)" data-id="q7">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/le-jeu-du-slibou.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Le Jeu du Slibou</a><span class="q-sub">Sculpteur</span></div>
+            <div class="q-rewards"><span class="q-kamas">11 980 K</span><span class="q-glace">❄ 1</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="11980" data-glace="1" onclick="toggleQuest(this)" data-id="q8">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/gastronomie-en-culotte-courte.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Gastronomie en Culotte Courte</a><span class="q-sub">Pêcheur</span></div>
+            <div class="q-rewards"><span class="q-kamas">11 980 K</span><span class="q-glace">❄ 1</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="11980" data-glace="1" onclick="toggleQuest(this)" data-id="q9">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/marche-ou-tombe.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Marche ou Tombe</a><span class="q-sub">Cordonnier</span></div>
+            <div class="q-rewards"><span class="q-kamas">11 980 K</span><span class="q-glace">❄ 1</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="11980" data-glace="1" onclick="toggleQuest(this)" data-id="q10">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/dessine-moi-un-bouton.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Dessine-Moi un Bouton</a><span class="q-sub">Tailleur</span></div>
+            <div class="q-rewards"><span class="q-kamas">11 980 K</span><span class="q-glace">❄ 1</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="11980" data-glace="1" onclick="toggleQuest(this)" data-id="q11">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/une-famille-en-or.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Une Famille en Or</a><span class="q-sub">Bijoutier</span></div>
+            <div class="q-rewards"><span class="q-kamas">11 980 K</span><span class="q-glace">❄ 1</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="11980" data-glace="1" onclick="toggleQuest(this)" data-id="q12">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/du-plomb-dans-la-cervelle.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Du Plomb dans la Cervelle</a><span class="q-sub">Chasseur</span></div>
+            <div class="q-rewards"><span class="q-kamas">11 980 K</span><span class="q-glace">❄ 1</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="11980" data-glace="1" onclick="toggleQuest(this)" data-id="q13">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/caisse-qui-dit.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Caisse qui Dit</a><span class="q-sub">Bricoleur</span></div>
+            <div class="q-rewards"><span class="q-kamas">11 980 K</span><span class="q-glace">❄ 1</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="11980" data-glace="1" onclick="toggleQuest(this)" data-id="q14">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/monsieur-nest-pas-une-tapette.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Monsieur n'est pas une Tapette</a><span class="q-sub">Forgeron</span></div>
+            <div class="q-rewards"><span class="q-kamas">11 980 K</span><span class="q-glace">❄ 1</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="11980" data-glace="1" onclick="toggleQuest(this)" data-id="q15">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/scie-sans-soixante-si.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Scie sans Soixante Si</a><span class="q-sub">Forgeron</span></div>
+            <div class="q-rewards"><span class="q-kamas">11 980 K</span><span class="q-glace">❄ 1</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="11980" data-glace="1" onclick="toggleQuest(this)" data-id="q16">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/aux-armes-citoyens.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Aux Armes Citoyens</a><span class="q-sub">Forgeron</span></div>
+            <div class="q-rewards"><span class="q-kamas">11 980 K</span><span class="q-glace">❄ 1</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="11980" data-glace="1" onclick="toggleQuest(this)" data-id="q17">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/couic-quand-tu-nous-tiens.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Couic Quand tu nous Tiens</a><span class="q-sub">Forgeron</span></div>
+            <div class="q-rewards"><span class="q-kamas">11 980 K</span><span class="q-glace">❄ 1</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="11980" data-glace="1" onclick="toggleQuest(this)" data-id="q18">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/tourner-ma-neige.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Tourner ma Neige</a><span class="q-sub">Forgeron</span></div>
+            <div class="q-rewards"><span class="q-kamas">11 980 K</span><span class="q-glace">❄ 1</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="11980" data-glace="1" onclick="toggleQuest(this)" data-id="q19">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/tir-au-but.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Tir au But</a><span class="q-sub">Sculpteur</span></div>
+            <div class="q-rewards"><span class="q-kamas">11 980 K</span><span class="q-glace">❄ 1</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="11980" data-glace="1" onclick="toggleQuest(this)" data-id="q20">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/mener-a-la-baguette.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Mener à la Baguette</a><span class="q-sub">Sculpteur</span></div>
+            <div class="q-rewards"><span class="q-kamas">11 980 K</span><span class="q-glace">❄ 1</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="11980" data-glace="1" onclick="toggleQuest(this)" data-id="q21">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/l-ultime-rempart.html" target="_blank" onclick="e=&gt;e.stopPropagation()">L'Ultime Rempart</a><span class="q-sub">Façonneur</span></div>
+            <div class="q-rewards"><span class="q-kamas">11 980 K</span><span class="q-glace">❄ 1</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divers Hebdo -->
+      <div class="subsection">
+        <div class="subsection-title" onclick="toggleSub(this)">
+          <span class="chevron">▾</span>
+          🗓️ Divers Hebdomadaires
+          <span class="sub-count">3 quêtes • par semaine</span>
+        </div>
+        <div class="subsection-body">
+          <div class="quest-row" data-kamas="4195" data-glace="1" onclick="toggleQuest(this)" data-id="q22">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/pas-de-vaccin-pour-les-vilains.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Pas de Vaccin pour les Vilains</a></div>
+            <div class="q-rewards"><span class="q-kamas">4 195 K</span><span class="q-glace">❄ 1</span><span class="q-tag-hebdo">Hebdo</span></div>
+          </div>
+          <div class="quest-row" data-kamas="16780" data-glace="1" onclick="toggleQuest(this)" data-id="q23">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/vacances-sur-glace.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Vacances sur Glace</a></div>
+            <div class="q-rewards"><span class="q-kamas">16 780 K</span><span class="q-glace">❄ 1</span><span class="q-tag-hebdo">Hebdo</span></div>
+          </div>
+          <div class="quest-row" data-kamas="10995" data-glace="0" onclick="toggleQuest(this)" data-id="q24">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name">
+              <a href="https://www.dofuspourlesnoobs.com/fight-club.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Fight Club</a>
+              <span class="q-sub">⭐ Potentiel énorme : 140 combats = autres quêtes qui rapportent kamas + kamas de glace</span>
+            </div>
+            <div class="q-rewards"><span class="q-kamas">10 995 K</span><span class="q-tag-hebdo">Hebdo</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divers Journalier -->
+      <div class="subsection">
+        <div class="subsection-title" onclick="toggleSub(this)">
+          <span class="chevron">▾</span>
+          📌 Divers Journalier
+          <span class="sub-count">1 quête • par jour</span>
+        </div>
+        <div class="subsection-body">
+          <div class="quest-row" data-kamas="16780" data-glace="1" onclick="toggleQuest(this)" data-id="q25">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/faire-le-tas-de-pin.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Faire le Tas de Pin</a></div>
+            <div class="q-rewards"><span class="q-kamas">16 780 K</span><span class="q-glace">❄ 1</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Farm Zone F1 -->
+      <div class="subsection">
+        <div class="subsection-title" onclick="toggleSub(this)">
+          <span class="chevron">▾</span>
+          ⚔️ Farm Zone
+          <span class="sub-count">6 quêtes • 1/jour aléatoire</span>
+        </div>
+        <div class="subsection-body">
+          <div class="notice"><span class="icon">⚠️</span><span>Quêtes journalières obtenues aléatoirement — impossible de toutes les faire le même jour. Le bilan coche uniquement celles que vous avez réellement obtenues.</span></div>
+          <div class="quest-row" data-kamas="7140" data-glace="1" onclick="toggleQuest(this)" data-id="q26">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/michel-shel-enquille-un-bouftonmouth.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Michel-Shel Enquille un Bouftonmouth</a></div>
+            <div class="q-rewards"><span class="q-kamas">7 140 K</span><span class="q-glace">❄ 1</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="8390" data-glace="1" onclick="toggleQuest(this)" data-id="q27">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/espece-menacee.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Espèce Menacée</a></div>
+            <div class="q-rewards"><span class="q-kamas">8 390 K</span><span class="q-glace">❄ 1</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="9740" data-glace="1" onclick="toggleQuest(this)" data-id="q28">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/pied-joyeux.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Pied Joyeux</a></div>
+            <div class="q-rewards"><span class="q-kamas">9 740 K</span><span class="q-glace">❄ 1</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="12740" data-glace="2" onclick="toggleQuest(this)" data-id="q29">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/-la-mort-vous-va-si-bien.html" target="_blank" onclick="e=&gt;e.stopPropagation()">La Mort Vous Va Si Bien</a></div>
+            <div class="q-rewards"><span class="q-kamas">12 740 K</span><span class="q-glace">❄ 2</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="14390" data-glace="2" onclick="toggleQuest(this)" data-id="q30">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/passe-ta-larme-agrave-gauche.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Passe ta Larme à Gauche</a></div>
+            <div class="q-rewards"><span class="q-kamas">14 390 K</span><span class="q-glace">❄ 2</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="14390" data-glace="2" onclick="toggleQuest(this)" data-id="q31">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/une-mine-patibulaire.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Une Mine Patibulaire</a></div>
+            <div class="q-rewards"><span class="q-kamas">14 390 K</span><span class="q-glace">❄ 2</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FRIGOST 2 -->
+  <div class="section s-f2">
+    <div class="section-header">
+      <div class="section-icon">🧊</div>
+      <div class="section-info">
+        <div class="section-name"><span>Frigost II</span> — Profondeurs glacées</div>
+        <div class="section-meta">5 quêtes • 2 par jour max</div>
+      </div>
+    </div>
+    <div class="section-body">
+      <!-- Farm Zone F2 -->
+      <div class="subsection">
+        <div class="subsection-title" onclick="toggleSub(this)">
+          <span class="chevron">▾</span>
+          ⚔️ Farm Zone
+          <span class="sub-count">4 quêtes • 1/4 aléatoire</span>
+        </div>
+        <div class="subsection-body">
+          <div class="notice"><span class="icon">⚠️</span><span>Quêtes journalières obtenues aléatoirement — impossible de toutes les faire simultanément.</span></div>
+          <div class="quest-row" data-kamas="16140" data-glace="2" onclick="toggleQuest(this)" data-id="q32">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/complegravetement-givreacute.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Complètement Givré</a></div>
+            <div class="q-rewards"><span class="q-kamas">16 140 K</span><span class="q-glace">❄ 2</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="17990" data-glace="2" onclick="toggleQuest(this)" data-id="q33">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/lappel-de-la-forecirct.html" target="_blank" onclick="e=&gt;e.stopPropagation()">L'Appel de la Forêt</a></div>
+            <div class="q-rewards"><span class="q-kamas">17 990 K</span><span class="q-glace">❄ 2</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="19940" data-glace="2" onclick="toggleQuest(this)" data-id="q34">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/crocs-en-jambes.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Crocs en Jambes</a></div>
+            <div class="q-rewards"><span class="q-kamas">19 940 K</span><span class="q-glace">❄ 2</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="19940" data-glace="2" onclick="toggleQuest(this)" data-id="q35">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/ourse-molle.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Ourse Molle</a></div>
+            <div class="q-rewards"><span class="q-kamas">19 940 K</span><span class="q-glace">❄ 2</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Farm Zone 2 F2 -->
+      <div class="subsection">
+        <div class="subsection-title" onclick="toggleSub(this)">
+          <span class="chevron">▾</span>
+          🦊 Farm Zone — Givrefoux
+          <span class="sub-count">1 quête • journalière (invasion)</span>
+        </div>
+        <div class="subsection-body">
+          <div class="notice"><span class="icon">⚠️</span><span>Cette quête ne peut être lancée que si le village est envahi par les givrefoux. Elle ne peut être rendue qu'une fois le village libéré.</span></div>
+          <div class="quest-row" data-kamas="16140" data-glace="1" onclick="toggleQuest(this)" data-id="q36">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/collecte-sanglante.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Collecte Sanglante</a></div>
+            <div class="q-rewards"><span class="q-kamas">16 140 K</span><span class="q-glace">❄ 1</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FRIGOST 3 -->
+  <div class="section s-f3">
+    <div class="section-header">
+      <div class="section-icon">💀</div>
+      <div class="section-info">
+        <div class="section-name"><span>Frigost III</span> — Zone endgame</div>
+        <div class="section-meta">5 quêtes • 1 par jour max (aléatoire)</div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="subsection">
+        <div class="subsection-title" onclick="toggleSub(this)">
+          <span class="chevron">▾</span>
+          ⚔️ Farm Zone
+          <span class="sub-count">5 quêtes • 1/5 aléatoire</span>
+        </div>
+        <div class="subsection-body">
+          <div class="notice"><span class="icon">⚠️</span><span>Une seule de ces 5 quêtes est proposée par jour (aléatoire). Cochez uniquement celle que vous avez obtenue.</span></div>
+          <div class="quest-row" data-kamas="21990" data-glace="3" onclick="toggleQuest(this)" data-id="q37">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/blouson-noir.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Blouson Noir</a></div>
+            <div class="q-rewards"><span class="q-kamas">21 990 K</span><span class="q-glace">❄ 3</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="21990" data-glace="3" onclick="toggleQuest(this)" data-id="q38">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/boicircte-de-conserve.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Boîte de Conserve</a></div>
+            <div class="q-rewards"><span class="q-kamas">21 990 K</span><span class="q-glace">❄ 3</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="21990" data-glace="3" onclick="toggleQuest(this)" data-id="q39">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/le-cinquiegraveme-eacuteleacutement.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Le Cinquième Élément</a></div>
+            <div class="q-rewards"><span class="q-kamas">21 990 K</span><span class="q-glace">❄ 3</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="21990" data-glace="3" onclick="toggleQuest(this)" data-id="q40">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/pousse-mousse.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Pousse-Mousse</a></div>
+            <div class="q-rewards"><span class="q-kamas">21 990 K</span><span class="q-glace">❄ 3</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+          <div class="quest-row" data-kamas="21990" data-glace="3" onclick="toggleQuest(this)" data-id="q41">
+            <div class="q-check"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <div class="q-name"><a href="https://www.dofuspourlesnoobs.com/trop-sinistre.html" target="_blank" onclick="e=&gt;e.stopPropagation()">Trop Sinistre</a></div>
+            <div class="q-rewards"><span class="q-kamas">21 990 K</span><span class="q-glace">❄ 3</span><span class="q-tag-random">Aléatoire</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+const SAVE_KEY = 'frigost_quetes_v1';
+
+// ─── Assign unique IDs to each quest row
+document.querySelectorAll('.quest-row').forEach((row, i) => {
+  row.dataset.id = 'q' + i;
+});
+
+// ─── Load saved state
+function loadState() {
+  try {
+    const raw = localStorage.getItem(SAVE_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch { return {}; }
+}
+
+function saveState(state) {
+  try { localStorage.setItem(SAVE_KEY, JSON.stringify(state)); } catch {}
+}
+
+// ─── Apply saved state on load
+const state = loadState();
+document.querySelectorAll('.quest-row').forEach(row => {
+  if (state[row.dataset.id]) {
+    row.classList.add('checked');
+  }
+});
+updateBilan();
+
+// ─── Toggle quest
+function toggleQuest(row) {
+  const state = loadState();
+  if (row.classList.contains('checked')) {
+    row.classList.remove('checked');
+    delete state[row.dataset.id];
+  } else {
+    row.classList.add('checked');
+    state[row.dataset.id] = true;
+  }
+  saveState(state);
+  updateBilan();
+}
+
+// ─── Update bilan
+function updateBilan() {
+  let kamas = 0, glace = 0, count = 0;
+  document.querySelectorAll('.quest-row.checked').forEach(row => {
+    kamas += parseInt(row.dataset.kamas || 0);
+    glace += parseInt(row.dataset.glace || 0);
+    count++;
+  });
+  document.getElementById('stat-kamas').textContent = kamas.toLocaleString('fr-FR');
+  document.getElementById('stat-glace').textContent = glace;
+  document.getElementById('stat-quetes').textContent = count;
+}
+
+// ─── Toggle subsection collapse
+function toggleSub(titleEl) {
+  titleEl.classList.toggle('collapsed');
+  const body = titleEl.nextElementSibling;
+  if (body) body.classList.toggle('hidden');
+}
+
+// ─── Reset all
+function resetAll() {
+  document.querySelectorAll('.quest-row.checked').forEach(r => r.classList.remove('checked'));
+  saveState({});
+  updateBilan();
+  showToast('Toutes les quêtes réinitialisées', 'success');
+}
+
+// ─── Toggle all
+let allChecked = false;
+function toggleAll() {
+  allChecked = !allChecked;
+  const state = {};
+  document.querySelectorAll('.quest-row').forEach(row => {
+    if (allChecked) {
+      row.classList.add('checked');
+      state[row.dataset.id] = true;
+    } else {
+      row.classList.remove('checked');
+    }
+  });
+  saveState(state);
+  updateBilan();
+  showToast(allChecked ? 'Toutes les quêtes cochées' : 'Toutes décochées', 'success');
+  document.querySelector('.btn-all').textContent = allChecked ? '✕ Tout décocher' : '✓ Tout cocher';
+}
+
+// ─── Toast
+let toastTimer;
+function showToast(msg, type = '') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast show ' + type;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.className = 'toast', 2200);
+}
+</script>
+
+
+</body></html>
